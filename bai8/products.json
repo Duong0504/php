@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "price": 25000000,
+    "description": "Điện thoại cao cấp từ Apple"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": 28000000,
+    "description": "Điện thoại Android hàng đầu"
+  }
+]

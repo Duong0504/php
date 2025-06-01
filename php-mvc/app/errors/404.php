@@ -1,0 +1,1 @@
+<h3 style="text-align: center; text-transform: uppercase; color: red;">Page not found</h3>

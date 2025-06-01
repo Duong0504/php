@@ -1,0 +1,32 @@
+<?php
+if(!empty($_SERVER['argv'][1])){
+    // Create controller
+    if($_SERVER['argv'][1] =='make:controller'){
+        if(!empty($_SERVER['argv'][2])){
+            $controllerName= ucfirst($_SERVER['argv'][2]);
+            if(!file_exists("app/controllers/{$controllerName}.php")){
+$data ='<?php
+class '.$controllerName.' extends Controller {
+    public function index() {   
+        
+    }
+}';
+                file_put_contents("app/controllers/{$controllerName}.php", $data);
+            }else {
+                echo "Controller da ton tai";
+            }
+        }
+    }
+    if($_SERVER['argv'][1] =='delete:controller'){
+        if(!empty($_SERVER['argv'][2])){
+            $controllerName= ucfirst($_SERVER['argv'][2]);
+            if(file_exists("app/controllers/{$controllerName}.php")){
+                unlink("app/controllers/{$controllerName}.php");
+                echo "Delete controller successfuly";
+            }else {
+                echo "Controller không tồn tại";
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+SQL : SELECT _code, _name PROFILE WHERE _name LIKE %keywork=''%;
+query_builder: $this->db->table('profile')->where('name', '=', 'thanh nhat')->where('id','>=', '3)->get();
+SQL Result : select * from profile where name = 'thanh nhat' and id >=3;
+1. where: $this->db->where(field, compare, value);
+2. or_where: $this->db->orwhere(field, compare, value);
+3 table: $this->db->table(name);
+4 join : $this->db->join(tableName, condition);
+5 limit: $this->db->limit(offset, number);
+6 insert: $this->db->table(name)->insert(values);
+7 update: $this->db->table(name)->where(field,compare, value)->update(data);
+8 delete: $this->db->table(name)->where(field,compare, value)->delete();
+9 whereLike: $this->db->whereLike(field, value);
+10 select: $this->db->select(field);
+11 lastId: $this->db->lastId();
